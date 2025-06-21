@@ -12,7 +12,7 @@ function Navbar() {
 
   const onSubmit = (data) => {
     navigate(`/search/${encodeURIComponent(data.query)}`);
-    setIsMenuOpen(false); // Close menu on search
+    setIsMenuOpen(false);
   };
 
   const handleToggleMenu = () => {
@@ -20,9 +20,9 @@ function Navbar() {
   };
 
   return (
-    <nav className={`${styles.navbar} bg-gradient-to-r from-primary to-primary-dark dark:from-primary-dark dark:to-gray-800 text-white p-4 shadow-lg sticky top-0 z-20 animate-slide-in`}>
+    <nav className={`${styles.navbar} bg-gradient-to-r from-primary to-primary-dark dark:from-primary-dark dark:to-gray-800 text-white p-4 shadow-lg sticky top-0 z-20 animate-fade-in-scale`}>
       <div className="container mx-auto flex justify-between items-center">
-        <Link to="/" className="text-3xl font-extrabold tracking-wide glow">КиноПоиск</Link>
+        <Link to="/" className="text-3xl font-extrabold tracking-wide glow hover:scale-105 transition-transform">КиноПоиск</Link>
         <div className="md:hidden">
           <button
             onClick={handleToggleMenu}
@@ -49,7 +49,7 @@ function Navbar() {
                 })}
                 type="text"
                 placeholder="Поиск фильмов..."
-                className={`${styles.inputSearch} p-3 pr-10 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none border-2 border-transparent focus:border-primary dark:focus:border-white shadow-md w-full`}
+                className={`${styles.inputSearch} p-3 pr-10 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none border-2 border-transparent focus:border-primary dark:focus:border-white shadow-md w-full transition-all duration-300`}
               />
               <svg
                 className="absolute right-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400 dark:text-gray-300"
@@ -62,7 +62,7 @@ function Navbar() {
             </div>
             <button
               type="submit"
-              className="ml-2 p-3 bg-white text-primary dark:text-black dark:bg-primary-dark rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors animate-pulse"
+              className="ml-2 p-3 bg-white text-primary dark:text-white dark:bg-primary-dark rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors animate-pulse"
             >
               Найти
             </button>
