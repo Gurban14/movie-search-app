@@ -1,0 +1,54 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.glow {
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7), 0 0 20px rgba(229, 9, 20, 0.5);
+  transition: text-shadow 0.3s ease;
+}
+
+.glow:hover {
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.9), 0 0 30px rgba(229, 9, 20, 0.8);
+}
+
+.inputSearch {
+  min-width: 300px;
+  transition: all 0.3s ease;
+}
+
+.inputSearch:focus {
+  border-color: #E50914;
+  box-shadow: 0 0 15px rgba(229, 9, 20, 0.6);
+}
+
+.navContent {
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .navContent {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .inputSearch {
+    min-width: 100%;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.5s ease-out;
+}

@@ -1,0 +1,9 @@
+.movieDetails {
+  padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .movieDetails {
+    padding: 1rem;
+  }
+}
